@@ -8,9 +8,9 @@
 	<script>
 localStorage.test = "Test"
 if ("test" in localStorage) {
-	alert("You have added the app in the homescreen!\nIf you are seeing this without even adding the app to homescreen, then this was a failure.")
+	document.body.innerHTML = ("You have added the app in the homescreen!<br>If you are seeing this without even adding the app to homescreen, then this was a failure.")
 } else {
-	alert("You must add the app to homescreen to continue.\nIf you are seeing this even after adding the app to the homescreen, then this is a failure")
+	document.body.innerHTML = ("You must add the app to homescreen to continue.<br>If you are seeing this even after adding the app to the homescreen, then this is a failure")
 }
 	</script>
 </html>
