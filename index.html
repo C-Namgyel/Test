@@ -6,7 +6,16 @@
 	<body>
 	</body>
 	<script>
-localStorage.test = "Test"
-window.open("./test.html", "_self")
+if ("testUsername" in localStorage) {
+	window.open("./test.html", "_self")
+} else {
+	var username = prompt("Enter a username\nYou will get redirected to another page where your name is supposed to be displayed. If it is displayed, then you have to reload close the tab and the open it again.\nIf the app doesnt ask for your username and directly goes to the display screen, then the test is a success.\nBut if this doesnt go like this, then you have to add this web to homescreen, and then restart the test.")
+	while (username == undefined || username == null || username.trim() == "") {
+		username = prompt("Enter a username\nYou will get redirected to another page where your name is supposed to be displayed. If it is displayed, then you have to reload close the tab and the open it again.\nIf the app doesnt ask for your username and directly goes to the display screen, then the test is a success.\nBut if this doesnt go like this, then you have to add this web to homescreen, and then restart the test.")
+		console.log(username)
+	}
+	localStorage["testUsername"] = username
+	window.open("./test.html", "_self")
+}
 	</script>
 </html>

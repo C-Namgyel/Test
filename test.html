@@ -6,10 +6,10 @@
 	<body>
 	</body>
 	<script>
-if ("test" in localStorage) {
-	document.body.innerHTML = ("You have added the app in the homescreen!<br>If you are seeing this without even adding the app to homescreen, then this was a failure.")
+if ("testUsername" in localStorage) {
+	document.body.innerHTML = ("Your name is "+localStorage["testUsername"])
 } else {
-	document.body.innerHTML = ("You must add the app to homescreen to continue.<br>If you are seeing this even after adding the app to the homescreen, then this is a failure")
+	document.body.innerHTML = ("Failed! Retry by adding the starting page to the homescreen!<a href='./index.html'>Go to starting page</a>")
 }
 	</script>
 </html>
